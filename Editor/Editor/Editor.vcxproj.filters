@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="01. Main Frame">
+      <UniqueIdentifier>{a44bd599-7c49-4406-a01c-a00f9be451a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. View">
+      <UniqueIdentifier>{a9627216-42d5-4c90-90e9-06cb387e7c93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Document">
+      <UniqueIdentifier>{9fe733af-d20f-46b5-b6f4-6bf2d88555d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Manager">
+      <UniqueIdentifier>{2614113d-ecd1-4e22-a9c9-a1f3c301048e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="12. Headers">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="12. Headers\12.1 Default">
+      <UniqueIdentifier>{668d4f7f-e693-46d9-a2e3-bdf7c6fc72d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="12. Headers\12.2 User Defined">
+      <UniqueIdentifier>{bbdfb74b-25e1-45ad-b678-e8a0b039120a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Manager\4.2 Resource Manager">
+      <UniqueIdentifier>{772ad128-ddf8-4cfc-ad9b-1d3e3037dd44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Manager\4.1 Device Manager">
+      <UniqueIdentifier>{d0f22238-a8e0-419e-a930-35b89a7ccf54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Resource">
+      <UniqueIdentifier>{56cce74e-0483-4606-b9c4-155151a1fdbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Resource\5.1 Texture">
+      <UniqueIdentifier>{2d791392-6525-486e-bbce-f888e6409446}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EditorDoc.h">
+      <Filter>03. Document</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorView.h">
+      <Filter>02. View</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>01. Main Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>12. Headers\12.1 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>12. Headers\12.1 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>12. Headers\12.1 Default</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>12. Headers\12.2 User Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor.h">
+      <Filter>01. Main Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceManager.h">
+      <Filter>04. Manager\4.1 Device Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>12. Headers\12.2 User Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>12. Headers\12.2 User Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="Functors.h">
+      <Filter>12. Headers\12.2 User Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="Structs.h">
+      <Filter>12. Headers\12.2 User Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>12. Headers\12.2 User Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>04. Manager\4.2 Resource Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>05. Resource\5.1 Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleTexture.h">
+      <Filter>05. Resource\5.1 Texture</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EditorDoc.cpp">
+      <Filter>03. Document</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorView.cpp">
+      <Filter>02. View</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>01. Main Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>12. Headers\12.2 User Defined</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor.cpp">
+      <Filter>01. Main Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceManager.cpp">
+      <Filter>04. Manager\4.1 Device Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>04. Manager\4.2 Resource Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>05. Resource\5.1 Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleTexture.cpp">
+      <Filter>05. Resource\5.1 Texture</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Editor.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Editor.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\EditorDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Editor.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

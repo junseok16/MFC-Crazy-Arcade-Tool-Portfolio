@@ -4,7 +4,7 @@
 #include "pch.h"
 #include "Editor.h"
 #include "afxdialogex.h"
-#include "CObjectMaker.h"
+#include "ObjectMaker.h"
 
 
 // CObjectMaker 대화 상자

@@ -27,4 +27,5 @@ private:
 
 public:
 	afx_msg void OnDestroy();
+
 };

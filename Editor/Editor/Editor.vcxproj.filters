@@ -5,9 +5,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="01. Main Frame">
-      <UniqueIdentifier>{a44bd599-7c49-4406-a01c-a00f9be451a1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="02. View">
       <UniqueIdentifier>{a9627216-42d5-4c90-90e9-06cb387e7c93}</UniqueIdentifier>
     </Filter>
@@ -39,16 +36,49 @@
     <Filter Include="05. Resource\5.1 Texture">
       <UniqueIdentifier>{2d791392-6525-486e-bbce-f888e6409446}</UniqueIdentifier>
     </Filter>
+    <Filter Include="06. Object">
+      <UniqueIdentifier>{d5258335-1497-4ec4-8670-139c3d88330b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. Object\6.1 Terrain">
+      <UniqueIdentifier>{fe767af0-8d26-40ba-9224-d84bf62460fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. Object\6.2 Environment">
+      <UniqueIdentifier>{863e577b-45d9-4295-8531-52f79dd36816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. Object\6.3 Creature">
+      <UniqueIdentifier>{6cc1ccf7-ab9f-40d2-8a38-9fbf69f50f1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. Object\6.1 Terrain\6.1.0 Base">
+      <UniqueIdentifier>{a1d8d64c-9d1d-4b6d-b4eb-828b4ce99488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Resource\5.1 Texture\5.1.0 Base">
+      <UniqueIdentifier>{5496d5d0-acde-46e0-b097-340bbac86351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. View\2.0 Base">
+      <UniqueIdentifier>{6017e666-33cf-4c81-930f-7c8d8c72fbe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. View\2.1 InspectorWnd">
+      <UniqueIdentifier>{8056b059-6064-47c3-a712-b689a0c23d91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. View\2.2 SceneWnd">
+      <UniqueIdentifier>{c2e7cc1c-0002-4563-b0a0-84fe45db0227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00. Main Frame">
+      <UniqueIdentifier>{a44bd599-7c49-4406-a01c-a00f9be451a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Window">
+      <UniqueIdentifier>{d45bc7d8-fce2-4020-8945-8a8dbb5ade30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Window\1.1 Dialog">
+      <UniqueIdentifier>{37c15020-3e77-4add-be2a-3c02f14c60d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EditorDoc.h">
       <Filter>03. Document</Filter>
     </ClInclude>
-    <ClInclude Include="EditorView.h">
-      <Filter>02. View</Filter>
-    </ClInclude>
     <ClInclude Include="MainFrm.h">
-      <Filter>01. Main Frame</Filter>
+      <Filter>00. Main Frame</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
       <Filter>12. Headers\12.1 Default</Filter>
@@ -63,7 +93,7 @@
       <Filter>12. Headers\12.2 User Defined</Filter>
     </ClInclude>
     <ClInclude Include="Editor.h">
-      <Filter>01. Main Frame</Filter>
+      <Filter>00. Main Frame</Filter>
     </ClInclude>
     <ClInclude Include="DeviceManager.h">
       <Filter>04. Manager\4.1 Device Manager</Filter>
@@ -86,28 +116,40 @@
     <ClInclude Include="ResourceManager.h">
       <Filter>04. Manager\4.2 Resource Manager</Filter>
     </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>05. Resource\5.1 Texture</Filter>
+    <ClInclude Include="Terrain.h">
+      <Filter>06. Object\6.1 Terrain\6.1.0 Base</Filter>
     </ClInclude>
-    <ClInclude Include="SingleTexture.h">
-      <Filter>05. Resource\5.1 Texture</Filter>
+    <ClInclude Include="Texture.h">
+      <Filter>05. Resource\5.1 Texture\5.1.0 Base</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorView.h">
+      <Filter>02. View\2.0 Base</Filter>
+    </ClInclude>
+    <ClInclude Include="MapView.h">
+      <Filter>02. View\2.1 InspectorWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="LogView.h">
+      <Filter>02. View\2.2 SceneWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectFormView.h">
+      <Filter>02. View\2.1 InspectorWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjectMaker.h">
+      <Filter>01. Window\1.1 Dialog</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EditorDoc.cpp">
       <Filter>03. Document</Filter>
     </ClCompile>
-    <ClCompile Include="EditorView.cpp">
-      <Filter>02. View</Filter>
-    </ClCompile>
     <ClCompile Include="MainFrm.cpp">
-      <Filter>01. Main Frame</Filter>
+      <Filter>00. Main Frame</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>12. Headers\12.2 User Defined</Filter>
     </ClCompile>
     <ClCompile Include="Editor.cpp">
-      <Filter>01. Main Frame</Filter>
+      <Filter>00. Main Frame</Filter>
     </ClCompile>
     <ClCompile Include="DeviceManager.cpp">
       <Filter>04. Manager\4.1 Device Manager</Filter>
@@ -115,11 +157,26 @@
     <ClCompile Include="ResourceManager.cpp">
       <Filter>04. Manager\4.2 Resource Manager</Filter>
     </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>05. Resource\5.1 Texture</Filter>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>06. Object\6.1 Terrain\6.1.0 Base</Filter>
     </ClCompile>
-    <ClCompile Include="SingleTexture.cpp">
-      <Filter>05. Resource\5.1 Texture</Filter>
+    <ClCompile Include="Texture.cpp">
+      <Filter>05. Resource\5.1 Texture\5.1.0 Base</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorView.cpp">
+      <Filter>02. View\2.0 Base</Filter>
+    </ClCompile>
+    <ClCompile Include="MapView.cpp">
+      <Filter>02. View\2.1 InspectorWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="LogView.cpp">
+      <Filter>02. View\2.2 SceneWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectFormView.cpp">
+      <Filter>02. View\2.1 InspectorWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectMaker.cpp">
+      <Filter>01. Window\1.1 Dialog</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

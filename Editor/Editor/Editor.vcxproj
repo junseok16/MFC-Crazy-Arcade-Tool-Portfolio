@@ -117,6 +117,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -185,6 +186,10 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CObjectMaker.h" />
+    <ClInclude Include="ObjectFormView.h" />
+    <ClInclude Include="LogView.h" />
+    <ClInclude Include="MapView.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DeviceManager.h" />
     <ClInclude Include="Editor.h" />
@@ -197,13 +202,17 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceManager.h" />
-    <ClInclude Include="SingleTexture.h" />
     <ClInclude Include="Structs.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Terrain.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Types.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CObjectMaker.cpp" />
+    <ClCompile Include="ObjectFormView.cpp" />
+    <ClCompile Include="LogView.cpp" />
+    <ClCompile Include="MapView.cpp" />
     <ClCompile Include="DeviceManager.cpp" />
     <ClCompile Include="Editor.cpp" />
     <ClCompile Include="EditorDoc.cpp" />
@@ -216,7 +225,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ResourceManager.cpp" />
-    <ClCompile Include="SingleTexture.cpp" />
+    <ClCompile Include="Terrain.cpp" />
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>

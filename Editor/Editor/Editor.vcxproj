@@ -186,9 +186,10 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CObjectMaker.h" />
-    <ClInclude Include="ObjectFormView.h" />
+    <ClInclude Include="ObjectMaker.h" />
+    <ClInclude Include="TileMaker.h" />
     <ClInclude Include="LogView.h" />
+    <ClInclude Include="MakerFormView.h" />
     <ClInclude Include="MapView.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DeviceManager.h" />
@@ -209,9 +210,10 @@
     <ClInclude Include="Types.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CObjectMaker.cpp" />
-    <ClCompile Include="ObjectFormView.cpp" />
+    <ClCompile Include="ObjectMaker.cpp" />
+    <ClCompile Include="TileMaker.cpp" />
     <ClCompile Include="LogView.cpp" />
+    <ClCompile Include="MakerFormView.cpp" />
     <ClCompile Include="MapView.cpp" />
     <ClCompile Include="DeviceManager.cpp" />
     <ClCompile Include="Editor.cpp" />

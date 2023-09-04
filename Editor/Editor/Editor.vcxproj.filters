@@ -57,12 +57,6 @@
     <Filter Include="02. View\2.0 Base">
       <UniqueIdentifier>{6017e666-33cf-4c81-930f-7c8d8c72fbe5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. View\2.1 InspectorWnd">
-      <UniqueIdentifier>{8056b059-6064-47c3-a712-b689a0c23d91}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02. View\2.2 SceneWnd">
-      <UniqueIdentifier>{c2e7cc1c-0002-4563-b0a0-84fe45db0227}</UniqueIdentifier>
-    </Filter>
     <Filter Include="00. Main Frame">
       <UniqueIdentifier>{a44bd599-7c49-4406-a01c-a00f9be451a1}</UniqueIdentifier>
     </Filter>
@@ -71,6 +65,12 @@
     </Filter>
     <Filter Include="01. Window\1.1 Dialog">
       <UniqueIdentifier>{37c15020-3e77-4add-be2a-3c02f14c60d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. View\2.1 Inspector">
+      <UniqueIdentifier>{8056b059-6064-47c3-a712-b689a0c23d91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. View\2.2 Scene">
+      <UniqueIdentifier>{c2e7cc1c-0002-4563-b0a0-84fe45db0227}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -126,16 +126,19 @@
       <Filter>02. View\2.0 Base</Filter>
     </ClInclude>
     <ClInclude Include="MapView.h">
-      <Filter>02. View\2.1 InspectorWnd</Filter>
+      <Filter>02. View\2.1 Inspector</Filter>
     </ClInclude>
     <ClInclude Include="LogView.h">
-      <Filter>02. View\2.2 SceneWnd</Filter>
+      <Filter>02. View\2.2 Scene</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectFormView.h">
-      <Filter>02. View\2.1 InspectorWnd</Filter>
-    </ClInclude>
-    <ClInclude Include="CObjectMaker.h">
+    <ClInclude Include="ObjectMaker.h">
       <Filter>01. Window\1.1 Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="TileMaker.h">
+      <Filter>01. Window\1.1 Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MakerFormView.h">
+      <Filter>02. View\2.1 Inspector</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -167,16 +170,19 @@
       <Filter>02. View\2.0 Base</Filter>
     </ClCompile>
     <ClCompile Include="MapView.cpp">
-      <Filter>02. View\2.1 InspectorWnd</Filter>
+      <Filter>02. View\2.1 Inspector</Filter>
     </ClCompile>
     <ClCompile Include="LogView.cpp">
-      <Filter>02. View\2.2 SceneWnd</Filter>
+      <Filter>02. View\2.2 Scene</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectFormView.cpp">
-      <Filter>02. View\2.1 InspectorWnd</Filter>
-    </ClCompile>
-    <ClCompile Include="CObjectMaker.cpp">
+    <ClCompile Include="ObjectMaker.cpp">
       <Filter>01. Window\1.1 Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="TileMaker.cpp">
+      <Filter>01. Window\1.1 Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MakerFormView.cpp">
+      <Filter>02. View\2.1 Inspector</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

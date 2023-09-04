@@ -6,7 +6,7 @@
 
 #include "EditorView.h"
 #include "MapView.h"
-#include "ObjectFormView.h"
+#include "MakerFormView.h"
 #include "LogView.h"
 
 #ifdef _DEBUG
@@ -96,7 +96,7 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
 
 	if (!m_inspectorWndSplitter.CreateStatic(&m_editorWndSplitter, 2, 1, WS_CHILD | WS_VISIBLE, m_editorWndSplitter.IdFromRowCol(0, 0))) { return FALSE; }
 	m_inspectorWndSplitter.CreateView(0, 0, RUNTIME_CLASS(CMapView), CSize(300, 400), pContext);
-	m_inspectorWndSplitter.CreateView(1, 0, RUNTIME_CLASS(CObjectFormView), CSize(300, 400), pContext);
+	m_inspectorWndSplitter.CreateView(1, 0, RUNTIME_CLASS(CMakerFormView), CSize(300, 400), pContext);
 
 	if (!m_sceneWndSplitter.CreateStatic(&m_editorWndSplitter, 2, 1, WS_CHILD | WS_VISIBLE, m_editorWndSplitter.IdFromRowCol(0, 1))) { return FALSE; }
 	m_sceneWndSplitter.CreateView(0, 0, RUNTIME_CLASS(CEditorView), CSize(IWINCX, IWINCY), pContext);

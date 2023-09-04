@@ -157,6 +157,9 @@ protected:
 // 구현입니다.
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnObjectMakerBnClicked();
+	afx_msg void OnTileMakerBnClicked();
 };
 
 CAboutDlg::CAboutDlg() noexcept : CDialogEx(IDD_ABOUTBOX)
@@ -179,6 +182,5 @@ void CEditorApp::OnAppAbout()
 }
 
 // CEditorApp 메시지 처리기
-
 
 

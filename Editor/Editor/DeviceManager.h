@@ -16,16 +16,20 @@ public:
 
 public:
 	LPDIRECT3DDEVICE9 GetDevice() const { return m_pDevice; }
-	LPD3DXSPRITE GetSprite() const { return m_pSprite; }
+	LPD3DXSPRITE GetSpriteCOM() const { return m_pSpriteCOM; }
+	LPD3DXFONT GetFontCOM() const { return m_pFontCOM; }
 
 private:
-	void SetParameters(D3DPRESENT_PARAMETERS& _tD3dpp);
+	void SetDeviceParameters(D3DPRESENT_PARAMETERS& _tD3dpp);
 
 private:
 	LPDIRECT3D9 m_pSDK = nullptr;
 	LPDIRECT3DDEVICE9 m_pDevice = nullptr;
 
 	// 스프라이트 COM 객체
-	LPD3DXSPRITE m_pSprite = nullptr;
+	LPD3DXSPRITE m_pSpriteCOM = nullptr;
+
+	// 폰트 COM 객체
+	LPD3DXFONT m_pFontCOM = nullptr;
 };
 

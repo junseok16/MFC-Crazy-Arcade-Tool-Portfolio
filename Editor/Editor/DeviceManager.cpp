@@ -38,24 +38,42 @@ HRESULT CDeviceManager::Initialize()
 	
 	D3DPRESENT_PARAMETERS tD3dpp;
 	ZeroMemory(&tD3dpp, sizeof(D3DPRESENT_PARAMETERS));
-	SetParameters(tD3dpp);
+	SetDeviceParameters(tD3dpp);
 
 	// 그래픽카드를 제어할 객체를 생성합니다.
 	{
 		HRESULT hCreateDeviceResult = m_pSDK->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, g_hWnd, lVertexProcessing, &tD3dpp, &m_pDevice);
 		if (FAILED(hCreateDeviceResult))
 		{
-			AfxMessageBox(L"CreateDevice() failed!");
+			AfxMessageBox(L"디바이스 객체를 생성할 수 없습니다.");
 			return E_FAIL;
 		}
 	}
 
 	// 스프라이트 COM 객체를 생성합니다.
 	{
-		HRESULT hCreateSpriteResult = D3DXCreateSprite(m_pDevice, &m_pSprite);
+		HRESULT hCreateSpriteResult = D3DXCreateSprite(m_pDevice, &m_pSpriteCOM);
 		if (FAILED(hCreateSpriteResult))
 		{
-			AfxMessageBox(L"CreateSprite() failed!");
+			AfxMessageBox(L"스프라이트 COM 객체를 생성할 수 없습니다.");
+			return E_FAIL;
+		}
+	}
+
+	// 폰트 COM 객체를 생성합니다.
+	{
+		D3DXFONT_DESCW tFontInfo;
+		ZeroMemory(&tFontInfo, sizeof(D3DXFONT_DESCW));
+
+		tFontInfo.Height = 20;
+		tFontInfo.Width = 10;
+		tFontInfo.Weight = FW_HEAVY;
+		tFontInfo.CharSet = HANGEUL_CHARSET;
+		lstrcpy(tFontInfo.FaceName, L"굴림");
+
+		if (FAILED(D3DXCreateFontIndirect(m_pDevice, &tFontInfo, &m_pFontCOM)))
+		{
+			AfxMessageBox(L"폰트 COM 객체를 생성할 수 없습니다.");
 			return E_FAIL;
 		}
 	}
@@ -73,24 +91,24 @@ void CDeviceManager::RenderBegin()
 		0);														// 스텐실 버퍼 초기화 값
 
 	m_pDevice->BeginScene();
-	m_pSprite->Begin(D3DXSPRITE_ALPHABLEND);
+	m_pSpriteCOM->Begin(D3DXSPRITE_ALPHABLEND);
 }
 
 void CDeviceManager::RenderEnd(HWND _hWnd)
 {
-	m_pSprite->End();
+	m_pSpriteCOM->End();
 	m_pDevice->EndScene();
 	m_pDevice->Present(nullptr, nullptr, _hWnd, nullptr);
 }
 
 void CDeviceManager::Release()
 {
-	SAFE_RELEASE(m_pSprite);
+	SAFE_RELEASE(m_pSpriteCOM);
 	SAFE_RELEASE(m_pDevice);
 	SAFE_RELEASE(m_pSDK);
 }
 
-void CDeviceManager::SetParameters(D3DPRESENT_PARAMETERS& _tD3dpp)
+void CDeviceManager::SetDeviceParameters(D3DPRESENT_PARAMETERS& _tD3dpp)
 {
 	_tD3dpp.BackBufferWidth = IWINCX;
 	_tD3dpp.BackBufferHeight = IWINCY;

@@ -1,18 +1,17 @@
-﻿
-// MainFrm.cpp: CMainFrame 클래스의 구현
-//
-
-#include "pch.h"
+﻿#include "pch.h"
 #include "framework.h"
 #include "Editor.h"
 
 #include "MainFrm.h"
 
+#include "EditorView.h"
+#include "MapView.h"
+#include "ObjectFormView.h"
+#include "LogView.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
-
-// CMainFrame
 
 IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)
 
@@ -22,28 +21,30 @@ END_MESSAGE_MAP()
 
 static UINT indicators[] =
 {
-	ID_SEPARATOR,           // 상태 줄 표시기
+	ID_SEPARATOR,
 	ID_INDICATOR_CAPS,
 	ID_INDICATOR_NUM,
 	ID_INDICATOR_SCRL,
 };
 
-// CMainFrame 생성/소멸
-
 CMainFrame::CMainFrame() noexcept
 {
-	// TODO: 여기에 멤버 초기화 코드를 추가합니다.
+
 }
 
 CMainFrame::~CMainFrame()
 {
+
 }
 
 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
 	if (CFrameWnd::OnCreate(lpCreateStruct) == -1)
+	{
 		return -1;
+	}
 
+#pragma region 도구 모음
 	/*
 	if (!m_wndToolBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
 		!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
@@ -64,21 +65,17 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockControlBar(&m_wndToolBar);
 	*/
+#pragma endregion
 
 	return 0;
 }
 
 BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 {
-	if( !CFrameWnd::PreCreateWindow(cs) )
-		return FALSE;
-	// TODO: CREATESTRUCT cs를 수정하여 여기에서
-	//  Window 클래스 또는 스타일을 수정합니다.
-
+	if (!CFrameWnd::PreCreateWindow(cs)) { return FALSE; }
+	
 	return TRUE;
 }
-
-// CMainFrame 진단
 
 #ifdef _DEBUG
 void CMainFrame::AssertValid() const
@@ -90,8 +87,21 @@ void CMainFrame::Dump(CDumpContext& dc) const
 {
 	CFrameWnd::Dump(dc);
 }
-#endif //_DEBUG
+#endif
 
 
-// CMainFrame 메시지 처리기
+BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
+{
+	if (!m_editorWndSplitter.CreateStatic(this, 1, 2)) { return FALSE; }
 
+	if (!m_inspectorWndSplitter.CreateStatic(&m_editorWndSplitter, 2, 1, WS_CHILD | WS_VISIBLE, m_editorWndSplitter.IdFromRowCol(0, 0))) { return FALSE; }
+	m_inspectorWndSplitter.CreateView(0, 0, RUNTIME_CLASS(CMapView), CSize(300, 400), pContext);
+	m_inspectorWndSplitter.CreateView(1, 0, RUNTIME_CLASS(CObjectFormView), CSize(300, 400), pContext);
+
+	if (!m_sceneWndSplitter.CreateStatic(&m_editorWndSplitter, 2, 1, WS_CHILD | WS_VISIBLE, m_editorWndSplitter.IdFromRowCol(0, 1))) { return FALSE; }
+	m_sceneWndSplitter.CreateView(0, 0, RUNTIME_CLASS(CEditorView), CSize(IWINCX, IWINCY), pContext);
+	m_sceneWndSplitter.CreateView(1, 0, RUNTIME_CLASS(CLogView), CSize(500, 200), pContext);
+
+	m_editorWndSplitter.SetColumnInfo(0, 300, 100);	
+	return TRUE;
+}

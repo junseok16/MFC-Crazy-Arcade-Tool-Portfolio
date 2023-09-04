@@ -28,4 +28,31 @@ private:
 public:
 	afx_msg void OnDestroy();
 
+	virtual BOOL OnInitDialog();
+
+private:
+	/**************
+		값 타입
+	**************/
+	CString m_strName;
+	CString m_strHP;
+	CString m_strAttack;
+	CString m_strDefense;
+
+	/**************
+		컨트롤 타입
+	**************/
+	CButton m_jobRadioBtn[3];
+	CListBox m_objectListBox;
+
+	/**************
+		기타
+	**************/
+	std::map<CString, CREATURE_INFO*> m_mapCreatureInfos;
+
+public:
+	afx_msg void OnInsertObjectBnClicked();
+	afx_msg void OnEraseObjectBnClicked();
+	afx_msg void OnObjectListLbnSelchange();
+	afx_msg void OnFindObjectBnClicked();
 };

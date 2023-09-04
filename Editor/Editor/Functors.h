@@ -47,16 +47,16 @@ public:
 	}
 };
 
-class CDeleteMap
+struct SAFE_DELETE_MAP
 {
 public:
 	template<typename T>
-	void operator()(T& Pair)
+	void operator()(T& _pair)
 	{
-		if (Pair.second)
+		if (_pair.second)
 		{
-			delete Pair.second;
-			Pair.second = nullptr;
+			delete _pair.second;
+			_pair.second = nullptr;
 		}
 	}
 };

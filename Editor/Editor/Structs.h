@@ -34,12 +34,13 @@ struct tagTile
 	int32 iParentIndex = 0;
 };
 
-struct tagUnit
+struct tagCreature
 {
 	CString strName = L"";
+	int32 iHP = 0;
 	int32 iAttack = 0;
-	int32 iHp = 0;
-	BYTE byJobIndex = 0;
+	int32 iDefense = 0;
+	BYTE byJob = 0;
 	BYTE byItem = 0;
 };
 
@@ -55,5 +56,5 @@ using TRANSFORM_INFO = tagTransform;
 using TEXTURE_INFO = tagTexture;
 using FRAMERATE_INFO = tagFrameRate;
 using TILE_INFO = tagTile;
-using UNIT_INFO = tagUnit;
+using CREATURE_INFO = tagCreature;
 using TEXTURE_PATH_INFO = tagTexturePath;

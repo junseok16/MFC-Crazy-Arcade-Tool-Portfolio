@@ -70,13 +70,23 @@ void CMakerFormView::OnInitialUpdate()
 
 void CMakerFormView::OnObjectMakerBnClicked()
 {
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	if (nullptr == m_objectMaker->GetSafeHwnd())
+	{
+		m_objectMaker->Create(IDD_CObjectMaker);
+	}
+
+	m_objectMaker->ShowWindow(SW_SHOW);
 }
 
 
 void CMakerFormView::OnTileMakerBnClicked()
 {
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	if (m_tileMaker->GetSafeHwnd() == nullptr)
+	{
+		m_tileMaker->Create(IDD_CTileMaker);
+	}
+
+	m_tileMaker->ShowWindow(SW_SHOW);
 }
 
 

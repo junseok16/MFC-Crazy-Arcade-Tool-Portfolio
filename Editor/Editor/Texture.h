@@ -1,13 +1,19 @@
 #pragma once
+
 class CTexture
 {
 public:
 	CTexture() = default;
-	virtual ~CTexture() = default;
+	virtual ~CTexture();
 
 public:
-	virtual const TEXTURE_INFO GetTextureInfo(const std::wstring& _wstrKey, const int iCount = 0) = 0;
-	virtual HRESULT InsertTexture(const std::wstring& _wstrPath, const std::wstring& _wstrKey, const int iCount = 0) = 0;
-	virtual void Release() = 0;
+	HRESULT InsertTextureInfo(const std::wstring& _wstrFullPath, const std::wstring& _wstrStateKey, const int32& _iCount = 0);
+
+	const TEXTURE_INFO* GetTextureInfo(const std::wstring& _wstrStateKey, const int32& _iCount = 0);
+	
+	void Release();
+
+private:
+	std::unordered_map<std::wstring, std::vector<TEXTURE_INFO*>> m_umapTextureInfos;
 };
 

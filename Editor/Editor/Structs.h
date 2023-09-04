@@ -29,7 +29,7 @@ struct tagTile
 	D3DXVECTOR3	vPosition{};// 타일의 중심 좌표
 	D3DXVECTOR3 vSize{};// 타일의 가로, 세로 길이
 	BYTE byOption = 0;
-	BYTE byDrawID = 0;
+	BYTE byTileID = 0;
 	int32 iIndex = 0;
 	int32 iParentIndex = 0;
 };

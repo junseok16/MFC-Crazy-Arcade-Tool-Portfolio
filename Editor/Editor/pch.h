@@ -41,6 +41,9 @@
 #include <cassert>
 #include <ctime>
 
+// C++20 표준 라이브러리
+#include <format>
+
 // 사용자 정의 헤더 파일
 #include "Types.h"
 #include "Defines.h"

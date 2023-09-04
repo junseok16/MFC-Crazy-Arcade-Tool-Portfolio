@@ -6,11 +6,18 @@
 const int32 IWINCX = 800;
 const int32 IWINCY = 600;
 
+const float FWINCX = 800.0f;
+const float FWINCY = 600.0f;
+
 const int32 ITILECX = 130;
 const int32 ITILECY = 68;
 
+const float FTILECX = 130.0f;
+const float FTILECY = 68.0f;
+
 const int32 ITILEX = 20;
 const int32 ITILEY = 30;
+
 
 #define		OBJ_NOEVENT		0
 #define		OBJ_DEAD		1

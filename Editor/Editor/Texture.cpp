@@ -16,7 +16,16 @@ HRESULT CTexture::InsertTextureInfo(const std::wstring& _wstrFullPath, const std
 		TEXTURE_INFO* pTextureInfo = new TEXTURE_INFO();
 		ZeroMemory(pTextureInfo, sizeof(pTextureInfo));
 
-		const wstring& wstrFinalPath = std::format(L"{0}{1}.png", _wstrFullPath, iIndex);
+		wstring wstrFinalPath;
+		if (0 <= iIndex && iIndex < 10)
+		{
+			wstrFinalPath = std::format(L"{0}0{1}.png", _wstrFullPath, iIndex);
+		}
+		else
+		{
+			wstrFinalPath = std::format(L"{0}{1}.png", _wstrFullPath, iIndex);
+		}
+		
 
 		if (FAILED(D3DXGetImageInfoFromFile(wstrFinalPath.c_str(), &(pTextureInfo->tImageInfo))))
 		{

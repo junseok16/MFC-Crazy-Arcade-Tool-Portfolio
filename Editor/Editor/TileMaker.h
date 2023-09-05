@@ -21,4 +21,14 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 지원입니다.
 
 	DECLARE_MESSAGE_MAP()
+
+public:
+	afx_msg void OnDestroy();
+	afx_msg void OnDropFiles(HDROP hDropInfo);
+	afx_msg void OnTileListLbnSelchange();
+
+private:
+	std::map<CString, CImage*> m_mapImages;
+	CListBox m_tileListBox;
+	CStatic m_tileImage;
 };

@@ -59,7 +59,7 @@ void CMakerFormView::OnInitialUpdate()
 	CFormView::OnInitialUpdate();
 
 	// 폼 뷰에 배치된 버튼의 폰트를 변경합니다.
-	m_font.CreatePointFont(128, L"굴림");
+	m_font.CreatePointFont(88, L"굴림");
 	GetDlgItem(IDC_BUTTON1)->SetFont(&m_font);
 	GetDlgItem(IDC_BUTTON2)->SetFont(&m_font);
 

@@ -93,7 +93,6 @@ void CEditorView::OnInitialUpdate()
 	InitObject();
 }
 
-
 void CEditorView::OnDestroy()
 {
 	CScrollView::OnDestroy();
@@ -105,17 +104,16 @@ void CEditorView::OnDestroy()
 	CResourceManager::GetInstance()->DestroyInstance();
 }
 
-
 void CEditorView::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	CScrollView::OnLButtonDown(nFlags, point);
 
-	m_pTerrain->ChangeTileTo(D3DXVECTOR3((float)(point.x + GetScrollPos(0)), (float)(point.y + GetScrollPos(1)), 0.0f), 0);
+	m_pTerrain->ChangeTileTo(D3DXVECTOR3((float)(point.x + GetScrollPos(0)), (float)(point.y + GetScrollPos(1)), 0.0f), m_iTerrainIndex);
 
 	// 에디터 뷰를 갱신합니다.
 	Invalidate(FALSE);
 
-	// 맵 뷰를 생긴합니다.
+	// 맵 뷰를 갱신합니다.
 	CMainFrame* pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());
 	CMapView* pMapView = dynamic_cast<CMapView*>(pMainFrm->GetInspectorWndSplitter()->GetPane(0, 0));
 	pMapView->Invalidate(FALSE);

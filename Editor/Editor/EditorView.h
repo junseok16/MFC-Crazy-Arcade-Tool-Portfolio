@@ -59,8 +59,12 @@ public:
 public:
 	CTerrain* GetTerrain() const { return m_pTerrain; }
 
+	void SetTerrainIndex(int32 _iTerrainIndex) { m_iTerrainIndex = _iTerrainIndex; }
+	int32 GetTerrainIndex() const { return m_iTerrainIndex; }
+
 private:
 	CTerrain* m_pTerrain = nullptr;
+	int32 m_iTerrainIndex = 0;
 };
 
 #ifndef _DEBUG  // EditorView.cpp의 디버그 버전

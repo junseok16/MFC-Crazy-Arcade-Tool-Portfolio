@@ -42,15 +42,6 @@
     <Filter Include="06. Object\6.1 Terrain">
       <UniqueIdentifier>{fe767af0-8d26-40ba-9224-d84bf62460fd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="06. Object\6.2 Environment">
-      <UniqueIdentifier>{863e577b-45d9-4295-8531-52f79dd36816}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="06. Object\6.3 Creature">
-      <UniqueIdentifier>{6cc1ccf7-ab9f-40d2-8a38-9fbf69f50f1a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="06. Object\6.1 Terrain\6.1.0 Base">
-      <UniqueIdentifier>{a1d8d64c-9d1d-4b6d-b4eb-828b4ce99488}</UniqueIdentifier>
-    </Filter>
     <Filter Include="05. Resource\5.1 Texture\5.1.0 Base">
       <UniqueIdentifier>{5496d5d0-acde-46e0-b097-340bbac86351}</UniqueIdentifier>
     </Filter>
@@ -71,6 +62,9 @@
     </Filter>
     <Filter Include="02. View\2.2 Scene">
       <UniqueIdentifier>{c2e7cc1c-0002-4563-b0a0-84fe45db0227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. Object\6.2 Block">
+      <UniqueIdentifier>{863e577b-45d9-4295-8531-52f79dd36816}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -116,9 +110,6 @@
     <ClInclude Include="ResourceManager.h">
       <Filter>04. Manager\4.2 Resource Manager</Filter>
     </ClInclude>
-    <ClInclude Include="Terrain.h">
-      <Filter>06. Object\6.1 Terrain\6.1.0 Base</Filter>
-    </ClInclude>
     <ClInclude Include="Texture.h">
       <Filter>05. Resource\5.1 Texture\5.1.0 Base</Filter>
     </ClInclude>
@@ -140,6 +131,12 @@
     <ClInclude Include="MakerFormView.h">
       <Filter>02. View\2.1 Inspector</Filter>
     </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>06. Object\6.1 Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="FileExplorer.h">
+      <Filter>12. Headers\12.2 User Defined</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EditorDoc.cpp">
@@ -159,9 +156,6 @@
     </ClCompile>
     <ClCompile Include="ResourceManager.cpp">
       <Filter>04. Manager\4.2 Resource Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Terrain.cpp">
-      <Filter>06. Object\6.1 Terrain\6.1.0 Base</Filter>
     </ClCompile>
     <ClCompile Include="Texture.cpp">
       <Filter>05. Resource\5.1 Texture\5.1.0 Base</Filter>
@@ -183,6 +177,12 @@
     </ClCompile>
     <ClCompile Include="MakerFormView.cpp">
       <Filter>02. View\2.1 Inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>06. Object\6.1 Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="FileExplorer.cpp">
+      <Filter>12. Headers\12.2 User Defined</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

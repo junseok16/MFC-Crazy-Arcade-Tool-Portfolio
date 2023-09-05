@@ -186,6 +186,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="FileExplorer.h" />
     <ClInclude Include="ObjectMaker.h" />
     <ClInclude Include="TileMaker.h" />
     <ClInclude Include="LogView.h" />
@@ -210,6 +211,7 @@
     <ClInclude Include="Types.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FileExplorer.cpp" />
     <ClCompile Include="ObjectMaker.cpp" />
     <ClCompile Include="TileMaker.cpp" />
     <ClCompile Include="LogView.cpp" />

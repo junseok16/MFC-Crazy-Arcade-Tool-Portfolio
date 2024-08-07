@@ -11,7 +11,7 @@
 <br>
 
 ## 🔗 링크
-- [크레이지 아케이드 툴 동영상](https://youtu.be/omgGKW781yA)
+- [크레이지 아케이드 툴 동영상](https://youtu.be/Uv0Mm6I5fog)
 <br>
 
 ## 🔎 프로필

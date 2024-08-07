@@ -1,12 +1,17 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=280&section=header&text=MFC%20Crazy%20Arcade%20Tool&fontSize=70&fontColor=ffffff&fontAlign=50&fontAlignY=45)
 
 # 🎮 MFC를 활용한 크레이지 아케이드 툴 포트폴리오
-| 크레이지 아케이드 | 플레이 |
-|:---:|:---:|
+
+## ⭐ 하이라이트
 |▼ 타일 배치|▼ 블록 배치|
+|:---|:---|
 |<img src="https://github.com/user-attachments/assets/4ad353e2-d2c2-46c6-a757-d38615c1a029" width="368" height="214">|<img src="https://github.com/user-attachments/assets/be2c3442-d467-497e-bd34-718fc56ce5bf" width="368" height="214">|
 |▼ 애니메이션 재생|▼ 클라이언트 파싱|
 |<img src="https://github.com/user-attachments/assets/f6bb2972-fb39-4d59-a9d0-25b34289dae8" width="368" height="214">|<img src="https://github.com/user-attachments/assets/c6d49da7-c5e2-4308-ad79-578d9dc04534" width="368" height="214">|
+<br>
+
+## 🔗 링크
+- [크레이지 아케이드 툴 동영상](https://youtu.be/omgGKW781yA)
 <br>
 
 ## 🔎 프로필
@@ -36,11 +41,6 @@
 - 배열에 `블록`, `장애물을 배치`하고 이동 여부, 이동 방향 등 속성을 설정할 수 있습니다.
 - 캐릭터의 2D 스프라이트 `애니메이션을 재생`하고 캐릭터 `능력치를 설정`할 수 있습니다.
 - 툴에서 제작한 콘텐츠를 바이너리화하여 `클라이언트로 파싱`할 수 있습니다.
-<br>
-
-## 🔗 링크
-- [크레이지 아케이드 툴 동영상](https://youtu.be/omgGKW781yA)
-- [크레이지 아케이드 툴 기술 소개서]()
 <br>
 
 ## ⓒ 2023-2024 Tak Junseok all rights reserved.
